@@ -1,6 +1,6 @@
 // Simple Factorial
-let pass = 5;
-let total = 1;
+let pass = 5; //pass being the starting number
+let total = 1; // total being the starting total number
 
 function factorial(){
   if(pass == 0){
@@ -12,10 +12,16 @@ function factorial(){
   }
 }
 
+//steps of the recursion:
+// factorial(3) returns 3 * factorial(2)
+// factorial(2) returns 3 * 2 * factorial(1)
+// factorial(1) returns 3 * 2 * 1 * factorial(0)
+// factorial(0) returns 3 * 2 * 1 * 1
+
 const num = factorial()
 console.log(num);
 
-//Better Factorial
+//Better/Refactored Factorial
 function factorialRemix(number){
   if(number == 0 || number == 1){
     return number;

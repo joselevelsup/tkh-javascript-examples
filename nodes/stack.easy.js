@@ -8,23 +8,28 @@ stack.push(4) //[1, 2, 3, 4]
 console.log(stack)
 
 stack.pop() //[1, 2, 3]
+console.log(stack);
 stack.pop() //[1, 2]
+console.log(stack);
 stack.pop() //[1]
+console.log(stack);
 stack.pop() //[]
+console.log(stack);
+
 
 //Reverses a string using a stack
 function reverse(str) {
-    let stack = [];
-    // push letter into stack
-    for (let i = 0; i < str.length; i++) {
-        stack.push(str[i]);
-    }
-    // pop letter from the stack
-    let reverseStr = '';
-    while (stack.length > 0) {
-        reverseStr += stack.pop();
-    }
-    return reverseStr;
+  let stack = [];
+  // push letter into stack
+  for (let i = 0; i < str.length; i++) {
+    stack.push(str[i]);
+  }
+  // pop letter from the stack
+  let reverseStr = '';
+  while (stack.length > 0) {
+    reverseStr += stack.pop();
+  }
+  return reverseStr;
 }
 
 //Another way of reversing a string 
@@ -60,36 +65,36 @@ function reverse(str) {
 
 
 class Stack {
-  constructor(){
+  constructor() {
     this.items = [];
   }
-  
+
   // push function
-  push(element){
-      // push element into the items
-      this.items.push(element);
+  push(element) {
+    // push element into the items
+    this.items.push(element);
   }
 
   // pop function
-  pop(){
-      // return top most element in the stack
-      // and removes it from the stack
-      // Underflow if stack is empty
-      if (this.items.length == 0)
-          return null;
-      return this.items.pop();
+  pop() {
+    // return top most element in the stack
+    // and removes it from the stack
+    // Underflow if stack is empty
+    if (this.items.length == 0)
+      return null;
+    return this.items.pop();
   }
 
   // peek function
-  peek(){
-      // return the top most element from the stack
-      // but does'nt delete it.
-      return this.items[this.items.length - 1];
+  peek() {
+    // return the top most element from the stack
+    // but does'nt delete it.
+    return this.items[this.items.length - 1];
   }
 
-  isEmpty(){
-      // return true if stack is empty
-      return this.items.length == 0;
+  isEmpty() {
+    // return true if stack is empty
+    return this.items.length == 0;
   }
 }
 
